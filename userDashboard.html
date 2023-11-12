@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DASHBOARD | HOME</title>
+    <link href="userDashboard.css" rel="stylesheet" text="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FIREBASE LINKS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+</head>
+  <body>
+    <!--Top section og the page  with time and profile-->
+    <section class="topLeft">
+        <!-- TIME & DATE-->
+        <div id="timeAndDate">
+            <h1 class="time" id="currentTime"></h1>
+            <h3 class="date" id="currentDate"></h3>
+        </div>
+        <!--//////////////////////////////////////////////////////////////////////////////////-->
+        <!-- BUTTONS -->
+        <div id="buttonsList">
+            <button onclick="openNotification()">
+                <i class="fa fa-bell" id="profileButton"></i>
+            </button>
+            <button onclick="openSettinngs()">
+                <i class="fa fa-gear" id="profileButton"></i>
+            </button>
+            <button onclick="openLogin()">
+                <i class="fa fa-user" id="profileButton"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- CENTERS-->
+    <section id="notificationCenter">
+        <div>
+            <button type="button" class="btn-close" aria-label="Close" onclick="closeNotification()">X</button>           
+             <p class="header">Notification Center</p>
+        </div>
+    </section>
+    <!--//////-->
+
+    <section id="settingsCenter">
+        <div>
+            <button type="button" class="btn-close" aria-label="Close" onclick="closeSettings()">X</button>           
+             <p class="header">Settings Center</p>
+        </div>
+
+        <div class="brightness">
+            <p>Brightness: </p>
+            <input type="range" min="0" max="100" value="0" id="brightnessRange"/>
+        </div>
+
+        <div class="clearChace">
+            <p>Clear info: </p>
+            <button onclick="reset()">CLEAR INFORMATION</button>
+        </div>
+    </section>
+    <!--//////-->
+
+    <section id="profileCenter">
+        <div>
+            <button type="button" class="btn-close" aria-label="Close" onclick="closeProfile()">X</button>           
+             <p class="header">Profile Center | <span id="email"></span></p>
+        </div>
+
+        <div>
+            <button onclick="logOut()" id="logoutButton">Logout</button>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- ThREE SELECTION-->
+    <section class="selection" id="threeButtonSelection">
+        <!-- ONE -->
+        <!-- <div class="selectionDiv" onclick="openWhoIsHomeList()">
+            <h5>Who's Home?</h5>
+        </div> -->
+        <!-- TWO -->
+        <div class="selectionDiv" onclick="dimAndWhite()">
+            <h5>Goodnight</h5>
+        </div>
+        <!-- THREE -->
+        <div class="selectionDiv" onclick="openLockUp()">
+            <h5>Lock up</h5>
+        </div>
+    </section>
+
+    <!-- displaying the wifi speed --> 
+    <section class="graph">
+        <div>
+            <canvas id="myChart"  width="400" height="30"></canvas>
+        </div>
+    </section>
+
+        <!-- UNLOCKING THE LOCK -->
+    <section class="lockUp" id="LockingUp" onclick="Unlock()">
+        <div class="unlock">
+            <h5>UNDER LOCKDOWN</h5>
+        </div>
+    </section>
+    
+
+
+    <script src="firebaseDashboard.js"></script>
+    <script src="javascript.js"></script>
+    <script src="openWindows.js"></script>
+    <script src="closeWindows.js"></script>
+    <script src="fetchWhosHome.js"></script>
+    <script src="draggablePeopleList.js"></script>
+    <script src="login.js"></script>
+    <script src="checkIfLockdown.js"></script>
+    <script src="changeBrightness.js"></script>
+    <script src="wifiSpeedGraph.js"></script>
+    <script src="goodnightMode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

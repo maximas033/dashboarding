@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DASHBOARD | HOME</title>
+    <link href="index.css" rel="stylesheet" text="text/css"></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FIREBASE LINKS-->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+</head>
+  <body>
+    <!--Top section og the page  with time and profile-->
+    <section class="topLeft">
+        <!-- Time-->
+        <div id="timeAndDate">
+            <h1 class="time" id="currentTime"></h1>
+            <h3 class="date" id="currentDate"></h3>
+        </div>
+        <!--//////////////////////////////////////////////////////////////////////////////////-->
+        <!-- Profile -->
+        <div id="buttonsList">
+            <button onclick = openLoginPage()>
+                <i class="fa fa-user" id="profileButton"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="middle">
+        <div>
+            <h1>D A S H B O A R D</h1>
+            <!-- Implement video-->
+            <h6> O F F L I N E </h6>
+            <h5 id="info" onclick="displayMessage()">&#8505</h5>
+            <h6 id="infoText">Please login for the dashboard. <span id="close" onclick="closeMessage()">x</span></h6>
+        </div>
+    </section>
+
+    <script src="firebaseDashboard.js"></script>
+    <script src="windowOnLoad.js"></script>
+    <script src="javascript.js"></script>
+    <script src="openLogin.js"></script>
+  </body>
+</html>

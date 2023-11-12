@@ -1,0 +1,202 @@
+*{
+    overflow-y: none;
+    background-color: #101314;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    transition: transform 5ms ease;
+}
+
+.topLeft{
+    color: #fffffa;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2% 0 2%
+}
+
+.time{
+    margin: none;
+    padding: none;
+    font-size: 45px;
+    vertical-align:center;
+}
+
+.date{
+    margin-top: -15%;
+}
+
+#buttonsList button{
+    border: none;
+}
+
+#buttonsList{
+    vertical-align:center;
+    margin-top: 1%;
+    color: #fffffa;
+    font-size: 45px;
+}
+
+
+
+.dot{
+    height: 15px;
+    width: 15px;
+    background-color: #e60000;
+    border-radius: 50%;
+    display: none;
+    position: absolute;
+    top: 4.5%;
+    right: 12.5%;
+}
+
+#notificationCenter{
+    display: none;
+    border: 1px solid #fffffa;
+    width: 30%;
+    height: 250px;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+}
+
+.btn-close{
+    color: #fffffa;
+    float: right;
+    border: none;
+    margin-right: 4%;
+}
+
+#notificationCenter .header{
+    color: #fffffa;
+    text-align: center;
+    font-size: 20px;
+}
+
+#wifiConnection{
+    color: #fffffa;
+    padding-left: 5%;
+}
+
+
+#settingsCenter{
+    display: none;
+    border: 1px solid #fffffa;
+    width: 30%;
+    height: 250px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.btn-close{
+    color: #fffffa;
+    float: right;
+    border: none;
+    margin-right: 4%;
+}
+
+#settingsCenter .header{
+    color: #fffffa;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+#profileButton{
+    color: #fffffa;
+    font-size: 25px;
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.263);
+}
+
+
+
+
+
+#profileCenter{
+    display: none;
+    border: 1px solid #fffffa;
+    width: 30%;
+    height: 250px;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+
+#profileCenter .header{
+    color: #fffffa;
+    text-align: center;
+    font-size: 20px;
+}
+
+#profileCenter #logoutButton{
+    align-items: center;
+    padding: 15px 50px;
+    color: red;
+    border: 1px solid red;
+    margin-left: 30%;
+}
+
+#profileCenter #logoutButton:hover{
+    background-color:red ;
+    color: #fffffa;
+}
+
+
+
+
+
+
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffffa;
+    font-size: 50px;
+    font-weight: lighter;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.middle h6{
+    color: #e60000;
+    font-size: 15px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#info{
+    color: #e60000;
+    font-size: 25px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#infoText{
+    color: #fffffa;
+    font-size: 13px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: #e60000;
+}
+
+#close{
+    padding: 3px;
+    color: #fffffa;
+    border: 0.2px solid #fffffa;
+    border-radius: 2px;
+}
